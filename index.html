@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>$DOCKIE – The Meme Crown of CoreDrop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="$DOCKIE is the community-powered meme & utility token of the CoreDrop ecosystem." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: radial-gradient(circle at top, #111827 0, #020617 42%, #000 100%); }
+    .glow-border { box-shadow: 0 0 60px rgba(56,189,248,0.2), 0 0 120px rgba(129,140,248,0.25); }
+    .dockie-orb { background: radial-gradient(circle at 30% 20%, #38bdf8 0, #4f46e5 36%, #0f172a 70%); }
+    .copy-btn { cursor:pointer; opacity:0.5; transition:opacity 0.15s; }
+    .copy-btn:hover { opacity:1; }
+    .copy-btn.copied { opacity:1; color:#22d3ee; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="text-slate-100 antialiased">
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 opacity-40 pointer-events-none">
+      <div class="dockie-orb w-[520px] h-[520px] rounded-full blur-3xl absolute -top-40 -right-32"></div>
+      <div class="dockie-orb w-[420px] h-[420px] rounded-full blur-3xl absolute -bottom-40 -left-24 opacity-60"></div>
+    </div>
+
+    <nav class="relative z-10 max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl dockie-orb border border-cyan-400/40"></div>
+        <div class="flex flex-col leading-tight">
+          <span class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">$DOCKIE</span>
+          <span class="text-xs text-slate-400">by CoreDrop</span>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#about" class="hover:text-cyan-300 transition">About</a>
+        <a href="#token" class="hover:text-cyan-300 transition">Token</a>
+        <a href="#how-to-buy" class="hover:text-cyan-300 transition">How to buy</a>
+        <a href="#crown" class="hover:text-cyan-300 transition">Dockie Crown NFT</a>
+        <a href="#roadmap" class="hover:text-cyan-300 transition">Roadmap</a>
+      </div>
+    </nav>
+
+    <section class="relative z-10 max-w-6xl mx-auto px-4 pt-10 pb-16 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-6">
+        <p class="uppercase tracking-[0.35em] text-xs text-cyan-300/80">CORE NATIVE · MEME & UTILITY</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
+          The Meme Crown<br /><span class="text-cyan-300">of CoreDrop</span>
+        </h1>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
+          $DOCKIE is the community-powered meme &amp; utility token of the CoreDrop ecosystem.
+          Born from degen culture, backed by real infrastructure: DEX, tooling and a one-of-one
+          Dockie Crown NFT.
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="https://dex.coredrop.fun" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-cyan-400 text-slate-950 text-xs sm:text-sm font-semibold shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition">
+            Buy $DOCKIE on CoreDrop DEX
+          </a>
+          <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="inline-flex items-center justify-center px-4 py-2 rounded-full border border-slate-600/70 text-xs sm:text-sm font-semibold text-slate-100 hover:border-cyan-300 hover:text-cyan-300 transition">
+            View Dockie Crown NFT
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-3 text-[11px] text-slate-400 mt-2">
+          <div class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Core Blockchain · CBC20 / CBC721
+          </div>
+          <div>Built by the CoreDrop team &amp; friends.</div>
+        </div>
+
+        <!-- Live Stats -->
+        <div class="mt-4 inline-flex flex-col gap-1 text-[11px] text-slate-400 bg-slate-900/60 border border-slate-700/70 rounded-2xl px-4 py-2">
+          <div class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="uppercase tracking-[0.18em] text-slate-300">Live Dockie Stats</span>
+          </div>
+          <div class="flex flex-wrap gap-3 mt-1">
+            <div><span class="text-slate-500 mr-1">Price</span><span id="dockie-price" class="font-mono text-cyan-300">coming soon</span></div>
+            <div><span class="text-slate-500 mr-1">Pool TVL</span><span id="dockie-tvl" class="font-mono text-emerald-300">coming soon</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center md:justify-end">
+        <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-[2.4rem] dockie-orb glow-border border border-cyan-400/30 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_0%,rgba(248,250,252,0.2),transparent_55%),radial-gradient(circle_at_80%_100%,rgba(45,212,191,0.18),transparent_55%)]"></div>
+          <div class="relative flex flex-col items-center gap-2">
+            <div class="text-5xl sm:text-6xl">👑</div>
+            <div class="text-xs uppercase tracking-[0.35em] text-slate-200/90">DOCKIE CROWN</div>
+            <div class="mt-1 text-[11px] text-slate-300/80 text-center max-w-[11rem]">1/1 NFT sitting on top of the $DOCKIE meme.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pb-20 space-y-20">
+
+    <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+    <section id="about" class="space-y-4">
+      <h2 class="text-2xl font-bold tracking-tight">What is $DOCKIE?</h2>
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
+        $DOCKIE is the native meme &amp; utility token around the CoreDrop ecosystem.
+        It started as an inside joke between builders and quickly turned into a symbol
+        for the community that actually ships: DEX, tooling, on-chain experiments, and a
+        one-of-one Dockie Crown NFT.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-4 text-sm">
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
+          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Meme</h3>
+          <p class="text-slate-400 text-xs">A culture-first token for the CoreDrop community. No corporate suits, just builders and degens.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
+          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Utility</h3>
+          <p class="text-slate-400 text-xs">Integrated with the CoreDrop DEX &amp; ecosystem. Future perks, experiments and gated features may revolve around holding $DOCKIE.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
+          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Crown</h3>
+          <p class="text-slate-400 text-xs">A single Dockie Crown CBC721 NFT sits on top of the lore – the meme king of CoreDrop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ TOKEN BASICS ═══════════════════════ -->
+    <section id="token" class="space-y-4">
+      <h2 class="text-2xl font-bold tracking-tight">Token Basics</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-5 space-y-2">
+          <div class="flex justify-between"><span class="text-slate-400">Name</span><span class="font-semibold text-slate-100">dOckie</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">Ticker</span><span class="font-semibold text-cyan-300">$DOCKIE</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">Network</span><span class="font-semibold text-slate-100">Core Blockchain</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">Standard</span><span class="font-semibold text-slate-100">CBC20</span></div>
+          <div class="flex justify-between items-center gap-2">
+            <span class="text-slate-400 shrink-0">Token Contract</span>
+            <div class="flex items-center gap-1.5 min-w-0">
+              <span id="token-addr" class="font-mono text-[11px] text-cyan-200 truncate">cb08cc3cbdd95983bfd8ad653cd99eabe681052e1af6</span>
+              <button onclick="copyAddr()" class="copy-btn text-[11px]" title="Copy address" id="copy-btn">📋</button>
+            </div>
+          </div>
+          <p class="mt-3 text-[11px] text-slate-400">Always double-check the token contract before trading. Imposters are lame.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-5 space-y-4">
+          <div>
+            <div class="text-slate-400 text-xs mb-1">Total Supply</div>
+            <div class="text-sm font-semibold text-slate-100">1,000,000,000 $DOCKIE</div>
+            <div class="text-[11px] text-slate-500 mt-1">18 decimals · fixed supply</div>
+          </div>
+          <div>
+            <div class="text-slate-400 text-xs mb-1">Liquidity</div>
+            <p class="text-[11px] text-slate-300">
+              Liquidity pools on the CoreDrop DEX are currently live in a testing phase.
+              Official pool addresses and full liquidity breakdown will be published once
+              the setup has passed internal and community testing. Until then, any pool
+              addresses shown in screenshots or demos are considered beta / testing only.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ HOW TO BUY ═══════════════════════ -->
+    <section id="how-to-buy" class="space-y-4">
+      <h2 class="text-2xl font-bold tracking-tight">How to Get $DOCKIE</h2>
+      <ol class="space-y-3 text-sm text-slate-300">
+        <li><span class="font-semibold text-slate-100">1. Get a Core-compatible wallet.</span><br />Use CorePass or another wallet that can connect to the Core network.</li>
+        <li><span class="font-semibold text-slate-100">2. Fund with XCB or CTN.</span><br />Bridge or acquire XCB/CTN on Core. You'll swap this into $DOCKIE.</li>
+        <li><span class="font-semibold text-slate-100">3. Open the CoreDrop DEX.</span><br />Head over to the CoreDrop DEX and select a $DOCKIE trading pair.</li>
+        <li><span class="font-semibold text-slate-100">4. Swap into $DOCKIE.</span><br />Enter the amount, review price impact &amp; slippage, then confirm the transaction.</li>
+        <li><span class="font-semibold text-slate-100">5. You're in.</span><br />Your wallet now holds $DOCKIE – welcome to the Dockie side of CoreDrop.</li>
+      </ol>
+    </section>
+
+    <!-- ═══════════════════════ DOCKIE CROWN NFT ═══════════════════════ -->
+    <section id="crown" class="space-y-4">
+      <h2 class="text-2xl font-bold tracking-tight">Dockie Crown – 1/1 NFT</h2>
+      <div class="grid md:grid-cols-2 gap-6 items-start text-sm">
+        <div class="rounded-2xl border border-yellow-400/40 bg-slate-900/60 p-5 space-y-3">
+          <p class="text-slate-200">The Dockie Crown is a one‑of‑one CBC721 NFT. It's the on‑chain crown of the $DOCKIE meme – there will only ever be one.</p>
+          <dl class="space-y-2 text-[13px]">
+            <div class="flex justify-between"><dt class="text-slate-400">Standard</dt><dd class="font-semibold text-slate-100">CBC721</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">Name</dt><dd class="font-semibold text-slate-100">dOckie Crown 1/1 (DOCKIECROWN)</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">Contract</dt><dd class="font-mono text-[11px] text-yellow-200">cb5581f37363dc6f21b5f89915bbe14f569edd29baa6</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-400">Supply</dt><dd class="font-semibold text-slate-100">1</dd></div>
+          </dl>
+          <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="inline-flex items-center justify-center mt-3 px-4 py-2 rounded-full border border-yellow-400/60 text-xs font-semibold text-yellow-200 hover:bg-yellow-400/10 transition">
+            View on Blockindex
+          </a>
+        </div>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-5 text-xs text-slate-300 space-y-2">
+          <p>The Crown is not a generic PFP. It's a single, verifiable artifact attached to the $DOCKIE story and the CoreDrop brand.</p>
+          <p>Whoever holds the Dockie Crown sits at the top of the meme. Everything else in the ecosystem is still accessible to everyone – but there is only one crown.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ ROADMAP ═══════════════════════ -->
+    <section id="roadmap" class="space-y-4">
+      <h2 class="text-2xl font-bold tracking-tight">Roadmap</h2>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
+          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 1 · Launch &amp; Liquidity</h3>
+          <p class="text-slate-400 text-xs">Token launch, CoreDrop DEX pools, Dockie Crown NFT minted, early community onboarded.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
+          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 2 · Ecosystem Perks</h3>
+          <p class="text-slate-400 text-xs">$DOCKIE-gated perks inside the CoreDrop ecosystem: boosted rewards, access to new experiments, NFT drops, private channels.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
+          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 3 · Beyond the Meme</h3>
+          <p class="text-slate-400 text-xs">Deeper integrations and collaborations built around $DOCKIE as the social layer of CoreDrop. The meme becomes infrastructure.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="uppercase tracking-[0.25em] text-slate-400">$DOCKIE</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Part of the CoreDrop ecosystem.</span>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://coredrop.fun" class="hover:text-cyan-300 transition">CoreDrop Hub</a>
+        <a href="https://dex.coredrop.fun" class="hover:text-cyan-300 transition">CoreDrop DEX</a>
+        <a href="https://blockindex.net/address/cb08cc3cbdd95983bfd8ad653cd99eabe681052e1af6" class="hover:text-cyan-300 transition">dOckie Token</a>
+        <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="hover:text-cyan-300 transition">Dockie Crown NFT</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function copyAddr() {
+      var addr = document.getElementById('token-addr').textContent.trim();
+      navigator.clipboard.writeText(addr).then(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = '✅'; btn.classList.add('copied');
+        setTimeout(function() { btn.textContent = '📋'; btn.classList.remove('copied'); }, 1500);
+      }).catch(function() {});
+    }
+
+    async function loadDockieStats() {
+      try {
+        var res = await fetch('https://api.coredrop.fun/dex/dockie-stats', { cache: 'no-store' });
+        if (!res.ok) throw new Error('status ' + res.status);
+        var data = await res.json();
+        var priceEl = document.getElementById('dockie-price');
+        var tvlEl = document.getElementById('dockie-tvl');
+        if (!priceEl || !tvlEl) return;
+        priceEl.textContent = typeof data.priceCtn === 'number' ? data.priceCtn.toFixed(8) + ' CTN' : 'n/a';
+        tvlEl.textContent = typeof data.tvlUsd === 'number' ? '$' + data.tvlUsd.toFixed(0) : 'n/a';
+      } catch (e) {
+        console.warn('Stats API not yet live', e);
+      }
+    }
+    // Uncomment once your stats API is ready:
+    // loadDockieStats(); setInterval(loadDockieStats, 30000);
+  </script>
+</body>
+</html>
