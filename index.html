@@ -8,12 +8,12 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background: radial-gradient(circle at top, #111827 0, #020617 42%, #000 100%); }
-    .glow-border { box-shadow: 0 0 60px rgba(56,189,248,0.2), 0 0 120px rgba(129,140,248,0.25); }
-    .dockie-orb { background: radial-gradient(circle at 30% 20%, #38bdf8 0, #4f46e5 36%, #0f172a 70%); }
+    body { background: radial-gradient(circle at top, #18181b 0, #020617 42%, #000 100%); }
+    .glow-border { box-shadow: 0 0 60px rgba(250,204,21,0.25), 0 0 120px rgba(234,179,8,0.35); }
+    .dockie-orb { background: radial-gradient(circle at 30% 20%, #facc15 0, #eab308 32%, #854d0e 70%); }
     .copy-btn { cursor:pointer; opacity:0.5; transition:opacity 0.15s; }
     .copy-btn:hover { opacity:1; }
-    .copy-btn.copied { opacity:1; color:#22d3ee; }
+    .copy-btn.copied { opacity:1; color:#facc15; }
     html { scroll-behavior: smooth; }
   </style>
 </head>
@@ -28,9 +28,9 @@
 
     <nav class="relative z-10 max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl dockie-orb border border-cyan-400/40"></div>
+        <div class="w-9 h-9 rounded-xl dockie-orb border border-yellow-400/60"></div>
         <div class="flex flex-col leading-tight">
-          <span class="text-sm uppercase tracking-[0.3em] text-cyan-300/80">$DOCKIE</span>
+          <span class="text-sm uppercase tracking-[0.3em] text-yellow-300/90">$DOCKIE</span>
           <span class="text-xs text-slate-400">by CoreDrop</span>
         </div>
       </div>
@@ -45,9 +45,9 @@
 
     <section class="relative z-10 max-w-6xl mx-auto px-4 pt-10 pb-16 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
       <div class="space-y-6">
-        <p class="uppercase tracking-[0.35em] text-xs text-cyan-300/80">CORE NATIVE · MEME & UTILITY</p>
+        <p class="uppercase tracking-[0.35em] text-xs text-yellow-300/80">CORE NATIVE · MEME & UTILITY</p>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight">
-          The Meme Crown<br /><span class="text-cyan-300">of CoreDrop</span>
+          The Meme Crown<br /><span class="text-yellow-300">of CoreDrop</span>
         </h1>
         <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
           $DOCKIE is the community-powered meme &amp; utility token of the CoreDrop ecosystem.
@@ -55,10 +55,10 @@
           Dockie Crown NFT.
         </p>
         <div class="flex flex-wrap items-center gap-3">
-          <a href="https://dex.coredrop.fun" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-cyan-400 text-slate-950 text-xs sm:text-sm font-semibold shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition">
+          <a href="https://dex.coredrop.fun" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-yellow-400 text-slate-950 text-xs sm:text-sm font-semibold shadow-lg shadow-yellow-400/40 hover:bg-yellow-300 transition">
             Buy $DOCKIE on CoreDrop DEX
           </a>
-          <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="inline-flex items-center justify-center px-4 py-2 rounded-full border border-slate-600/70 text-xs sm:text-sm font-semibold text-slate-100 hover:border-cyan-300 hover:text-cyan-300 transition">
+          <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="inline-flex items-center justify-center px-4 py-2 rounded-full border border-slate-600/70 text-xs sm:text-sm font-semibold text-slate-100 hover:border-yellow-300 hover:text-yellow-300 transition">
             View Dockie Crown NFT
           </a>
         </div>
@@ -74,10 +74,10 @@
         <div class="mt-4 inline-flex flex-col gap-1 text-[11px] text-slate-400 bg-slate-900/60 border border-slate-700/70 rounded-2xl px-4 py-2">
           <div class="flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="uppercase tracking-[0.18em] text-slate-300">Live Dockie Stats</span>
+            <span class="uppercase tracking-[0.18em] text-yellow-200">Live Dockie Stats</span>
           </div>
           <div class="flex flex-wrap gap-3 mt-1">
-            <div><span class="text-slate-500 mr-1">Price</span><span id="dockie-price" class="font-mono text-cyan-300">coming soon</span></div>
+            <div><span class="text-slate-500 mr-1">Price</span><span id="dockie-price" class="font-mono text-yellow-300">coming soon</span></div>
             <div><span class="text-slate-500 mr-1">Pool TVL</span><span id="dockie-tvl" class="font-mono text-emerald-300">coming soon</span></div>
           </div>
         </div>
@@ -219,15 +219,15 @@
   <footer class="border-t border-slate-800/80 bg-slate-950/80">
     <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
       <div class="flex items-center gap-2">
-        <span class="uppercase tracking-[0.25em] text-slate-400">$DOCKIE</span>
+        <span class="uppercase tracking-[0.25em] text-yellow-400">$DOCKIE</span>
         <span class="hidden sm:inline">·</span>
         <span>Part of the CoreDrop ecosystem.</span>
       </div>
       <div class="flex flex-wrap gap-3">
-        <a href="https://coredrop.fun" class="hover:text-cyan-300 transition">CoreDrop Hub</a>
-        <a href="https://dex.coredrop.fun" class="hover:text-cyan-300 transition">CoreDrop DEX</a>
-        <a href="https://blockindex.net/address/cb08cc3cbdd95983bfd8ad653cd99eabe681052e1af6" class="hover:text-cyan-300 transition">dOckie Token</a>
-        <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="hover:text-cyan-300 transition">Dockie Crown NFT</a>
+        <a href="https://coredrop.fun" class="hover:text-yellow-300 transition">CoreDrop Hub</a>
+        <a href="https://dex.coredrop.fun" class="hover:text-yellow-300 transition">CoreDrop DEX</a>
+        <a href="https://blockindex.net/address/cb08cc3cbdd95983bfd8ad653cd99eabe681052e1af6" class="hover:text-yellow-300 transition">dOckie Token</a>
+        <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="hover:text-yellow-300 transition">Dockie Crown NFT</a>
       </div>
     </div>
   </footer>
