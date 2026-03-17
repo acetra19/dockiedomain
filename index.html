@@ -11,6 +11,12 @@
     body { background: radial-gradient(circle at top, #18181b 0, #020617 42%, #000 100%); }
     .glow-border { box-shadow: 0 0 60px rgba(250,204,21,0.25), 0 0 120px rgba(234,179,8,0.35); }
     .dockie-orb { background: radial-gradient(circle at 30% 20%, #facc15 0, #eab308 32%, #854d0e 70%); }
+    .dockie-logo-hero { animation: dockieFloat 8s ease-in-out infinite; }
+    @keyframes dockieFloat {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-10px) scale(1.02); }
+      100% { transform: translateY(0) scale(1); }
+    }
     .copy-btn { cursor:pointer; opacity:0.5; transition:opacity 0.15s; }
     .copy-btn:hover { opacity:1; }
     .copy-btn.copied { opacity:1; color:#facc15; }
@@ -84,13 +90,14 @@
       </div>
 
       <div class="relative flex justify-center md:justify-end">
-        <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-[2.4rem] dockie-orb glow-border border border-cyan-400/30 flex items-center justify-center relative overflow-hidden">
-          <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_0%,rgba(248,250,252,0.2),transparent_55%),radial-gradient(circle_at_80%_100%,rgba(45,212,191,0.18),transparent_55%)]"></div>
-          <div class="relative flex flex-col items-center gap-2">
-            <div class="text-5xl sm:text-6xl">👑</div>
-            <div class="text-xs uppercase tracking-[0.35em] text-slate-200/90">DOCKIE CROWN</div>
-            <div class="mt-1 text-[11px] text-slate-300/80 text-center max-w-[11rem]">1/1 NFT sitting on top of the $DOCKIE meme.</div>
-          </div>
+        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-[2.4rem] bg-slate-950/40 glow-border border border-yellow-400/40 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_0%,rgba(250,204,21,0.35),transparent_55%),radial-gradient(circle_at_80%_100%,rgba(234,179,8,0.25),transparent_55%)]"></div>
+          <img
+            src="https://dex.coredrop.fun/assets/DockieLogo.jpg"
+            alt="$DOCKIE golden meme coin artwork"
+            class="relative max-w-full max-h-full object-contain dockie-logo-hero"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
