@@ -326,20 +326,29 @@
 
     async function loadDockieStats() {
       try {
-        var res = await fetch('https://api.coredrop.fun/dex/dockie-stats', { cache: 'no-store' });
+        var res = await fetch('https://dex.coredrop.fun/api/dex/dockie-stats', { cache: 'no-store' });
         if (!res.ok) throw new Error('status ' + res.status);
         var data = await res.json();
         var priceEl = document.getElementById('dockie-price');
         var tvlEl = document.getElementById('dockie-tvl');
         if (!priceEl || !tvlEl) return;
-        priceEl.textContent = typeof data.priceCtn === 'number' ? data.priceCtn.toFixed(8) + ' CTN' : 'n/a';
-        tvlEl.textContent = typeof data.tvlUsd === 'number' ? '$' + data.tvlUsd.toFixed(0) : 'n/a';
+        if (typeof data.priceCtn === 'number' && isFinite(data.priceCtn)) {
+          priceEl.textContent = data.priceCtn.toFixed(8) + ' CTN';
+        } else {
+          priceEl.textContent = 'n/a';
+        }
+        if (typeof data.tvlUsd === 'number' && isFinite(data.tvlUsd)) {
+          tvlEl.textContent = '$' + data.tvlUsd.toFixed(0);
+        } else if (typeof data.tvlCtn === 'number' && isFinite(data.tvlCtn)) {
+          tvlEl.textContent = data.tvlCtn.toFixed(0) + ' CTN';
+        } else {
+          tvlEl.textContent = 'n/a';
+        }
       } catch (e) {
         console.warn('Stats API not yet live', e);
       }
     }
-    // Uncomment once your stats API is ready:
-    // loadDockieStats(); setInterval(loadDockieStats, 30000);
+    loadDockieStats(); setInterval(loadDockieStats, 30000);
   </script>
 </body>
 </html>
