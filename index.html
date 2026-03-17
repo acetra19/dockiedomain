@@ -55,9 +55,9 @@
           Dockie Crown NFT.
         </p>
         <div class="flex flex-wrap items-center gap-3">
-          <a href="https://dex.coredrop.fun" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-yellow-400 text-slate-950 text-xs sm:text-sm font-semibold shadow-lg shadow-yellow-400/40 hover:bg-yellow-300 transition">
+          <button type="button" onclick="openDexModal()" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-yellow-400 text-slate-950 text-xs sm:text-sm font-semibold shadow-lg shadow-yellow-400/40 hover:bg-yellow-300 transition">
             Buy $DOCKIE on CoreDrop DEX
-          </a>
+          </button>
           <a href="https://blockindex.net/address/cb5581f37363dc6f21b5f89915bbe14f569edd29baa6" class="inline-flex items-center justify-center px-4 py-2 rounded-full border border-slate-600/70 text-xs sm:text-sm font-semibold text-slate-100 hover:border-yellow-300 hover:text-yellow-300 transition">
             View Dockie Crown NFT
           </a>
@@ -163,13 +163,20 @@
     <!-- ═══════════════════════ HOW TO BUY ═══════════════════════ -->
     <section id="how-to-buy" class="space-y-4">
       <h2 class="text-2xl font-bold tracking-tight">How to Get $DOCKIE</h2>
-      <ol class="space-y-3 text-sm text-slate-300">
-        <li><span class="font-semibold text-slate-100">1. Get a Core-compatible wallet.</span><br />Use CorePass or another wallet that can connect to the Core network.</li>
-        <li><span class="font-semibold text-slate-100">2. Fund with XCB or CTN.</span><br />Bridge or acquire XCB/CTN on Core. You'll swap this into $DOCKIE.</li>
-        <li><span class="font-semibold text-slate-100">3. Open the CoreDrop DEX.</span><br />Head over to the CoreDrop DEX and select a $DOCKIE trading pair.</li>
-        <li><span class="font-semibold text-slate-100">4. Swap into $DOCKIE.</span><br />Enter the amount, review price impact &amp; slippage, then confirm the transaction.</li>
-        <li><span class="font-semibold text-slate-100">5. You're in.</span><br />Your wallet now holds $DOCKIE – welcome to the Dockie side of CoreDrop.</li>
-      </ol>
+      <div class="space-y-3 text-sm text-slate-300">
+        <p class="text-[11px] text-amber-300/90 uppercase tracking-[0.18em]">Heads up · DEX in closed beta soon</p>
+        <p class="text-xs text-slate-400 max-w-xl">
+          The CoreDrop DEX for $DOCKIE is not live for the public yet. A closed beta with testers and early
+          community members will start soon – until then, any interface or screenshots you see are pre‑release.
+        </p>
+        <ol class="space-y-3 text-sm text-slate-300">
+          <li><span class="font-semibold text-slate-100">1. Get a Core-compatible wallet.</span><br />Use CorePass or another wallet that can connect to the Core network.</li>
+          <li><span class="font-semibold text-slate-100">2. Prepare some XCB / CTN.</span><br />Bridge or acquire XCB/CTN on Core. This will be the base asset you swap into $DOCKIE during or after the beta.</li>
+          <li><span class="font-semibold text-slate-100">3. Join the CoreDrop channels.</span><br />Announcements for the closed beta, access links and instructions will be shared via the official CoreDrop socials and community channels.</li>
+          <li><span class="font-semibold text-slate-100">4. Join the DEX beta when invited.</span><br />Once the beta opens, connect your wallet to the CoreDrop DEX, double‑check the official token contract and try the flows.</li>
+          <li><span class="font-semibold text-slate-100">5. Post‑beta public trading.</span><br />After the testing phase and audits, public $DOCKIE trading on the CoreDrop DEX will be enabled – the exact timeline will be announced.</li>
+        </ol>
+      </div>
     </section>
 
     <!-- ═══════════════════════ DOCKIE CROWN NFT ═══════════════════════ -->
@@ -199,21 +206,54 @@
     <section id="roadmap" class="space-y-4">
       <h2 class="text-2xl font-bold tracking-tight">Roadmap</h2>
       <div class="grid md:grid-cols-3 gap-4 text-sm">
-        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
-          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 1 · Launch &amp; Liquidity</h3>
-          <p class="text-slate-400 text-xs">Token launch, CoreDrop DEX pools, Dockie Crown NFT minted, early community onboarded.</p>
+        <div class="rounded-2xl border border-yellow-400/40 bg-slate-900/50 p-4 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_0%_0%,rgba(250,204,21,0.7),transparent_55%)]"></div>
+          <div class="relative space-y-1">
+            <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 1 · Airdrop Season</h3>
+            <p class="text-slate-400 text-xs">Early community airdrops, quests and contributor rewards. $DOCKIE distribution to the people actually building and hanging around CoreDrop.</p>
+            <p class="text-[11px] text-amber-300/90">Status: <span class="font-semibold">Live</span> · Ongoing waves.</p>
+          </div>
         </div>
-        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
-          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 2 · Ecosystem Perks</h3>
-          <p class="text-slate-400 text-xs">$DOCKIE-gated perks inside the CoreDrop ecosystem: boosted rewards, access to new experiments, NFT drops, private channels.</p>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_100%_0%,rgba(250,204,21,0.6),transparent_55%)]"></div>
+          <div class="relative space-y-1">
+            <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 2 · Auction House &amp; Mini‑DEX</h3>
+            <p class="text-slate-400 text-xs">Light‑weight trading primitives: on‑chain auction house for Dockie‑related assets, simple swap interface and price discovery tools for early pairs.</p>
+            <p class="text-[11px] text-slate-500">Status: In development · Closed beta with testers first.</p>
+          </div>
         </div>
-        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4">
-          <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 3 · Beyond the Meme</h3>
-          <p class="text-slate-400 text-xs">Deeper integrations and collaborations built around $DOCKIE as the social layer of CoreDrop. The meme becomes infrastructure.</p>
+        <div class="rounded-2xl border border-slate-700/70 bg-slate-900/40 p-4 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_50%_100%,rgba(250,204,21,0.6),transparent_55%)]"></div>
+          <div class="relative space-y-1">
+            <h3 class="text-xs font-semibold text-slate-200 uppercase tracking-wide mb-1">Phase 3 · Full DEX &amp; Launchpad</h3>
+            <p class="text-slate-400 text-xs">Full CoreDrop DEX rollout with richer routing, analytics and a curated launchpad where $DOCKIE holders can access early pools, boosts and whitelists.</p>
+            <p class="text-[11px] text-slate-500">Status: Planned · Details will be refined with the community as we ship.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- ═══════════════════════ DEX MODAL ═══════════════════════ -->
+  <div id="dex-modal" class="fixed inset-0 z-40 hidden items-center justify-center bg-black/70 backdrop-blur-sm">
+    <div class="relative max-w-md w-full mx-4 rounded-3xl bg-slate-900/95 border border-yellow-400/50 p-6 shadow-2xl">
+      <button type="button" onclick="closeDexModal()" class="absolute top-3 right-3 text-slate-400 hover:text-slate-100 text-xs">✕</button>
+      <div class="flex flex-col items-center text-center gap-3">
+        <div class="w-16 h-16 rounded-2xl dockie-orb glow-border flex items-center justify-center">
+          <span class="text-3xl">👑</span>
+        </div>
+        <h3 class="text-lg font-bold tracking-tight text-yellow-200">CoreDrop DEX · Coming very soon</h3>
+        <p class="text-xs text-slate-300 max-w-sm">
+          The $DOCKIE experience on the CoreDrop DEX is currently in preparation. A closed beta with
+          selected testers will start first, followed by a public rollout once the flows feel right.
+        </p>
+        <p class="text-[11px] text-slate-400">
+          Watch the official CoreDrop channels for the beta invite, final token + pool addresses and
+          a full walkthrough of how to trade $DOCKIE safely.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
   <footer class="border-t border-slate-800/80 bg-slate-950/80">
@@ -240,6 +280,20 @@
         btn.textContent = '✅'; btn.classList.add('copied');
         setTimeout(function() { btn.textContent = '📋'; btn.classList.remove('copied'); }, 1500);
       }).catch(function() {});
+    }
+
+    function openDexModal() {
+      var el = document.getElementById('dex-modal');
+      if (!el) return;
+      el.classList.remove('hidden');
+      el.classList.add('flex');
+    }
+
+    function closeDexModal() {
+      var el = document.getElementById('dex-modal');
+      if (!el) return;
+      el.classList.remove('flex');
+      el.classList.add('hidden');
     }
 
     async function loadDockieStats() {
