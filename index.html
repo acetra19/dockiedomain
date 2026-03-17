@@ -336,9 +336,9 @@
         var tvlEl = document.getElementById('dockie-tvl');
         if (!priceEl || !tvlEl) return;
         if (typeof data.priceCtn === 'number' && isFinite(data.priceCtn)) {
-          priceEl.textContent = data.priceCtn.toFixed(8) + ' CTN';
+          priceEl.textContent = '≈ ' + data.priceCtn.toFixed(4) + ' CTN';
         } else {
-          priceEl.textContent = 'n/a';
+          priceEl.textContent = '≈ 0.0000 CTN';
         }
         if (typeof data.tvlUsd === 'number' && isFinite(data.tvlUsd)) {
           tvlEl.textContent = '$' + data.tvlUsd.toFixed(0);
