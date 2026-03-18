@@ -85,6 +85,7 @@
           <div class="flex flex-wrap gap-3 mt-1">
             <div><span class="text-slate-500 mr-1">Price</span><span id="dockie-price" class="font-mono text-yellow-300">coming soon</span></div>
             <div><span class="text-slate-500 mr-1">Pool TVL</span><span id="dockie-tvl" class="font-mono text-emerald-300">coming soon</span></div>
+            <div><span class="text-slate-500 mr-1">Holders</span><span id="dockie-holders" class="font-mono text-yellow-200">loading…</span></div>
           </div>
         </div>
       </div>
@@ -350,6 +351,7 @@
         var data = await res.json();
         var priceEl = document.getElementById('dockie-price');
         var tvlEl = document.getElementById('dockie-tvl');
+        var holdersEl = document.getElementById('dockie-holders');
         if (!priceEl || !tvlEl) return;
         if (typeof data.priceCtn === 'number' && isFinite(data.priceCtn)) {
           priceEl.textContent = '≈ ' + data.priceCtn.toFixed(4) + ' CTN';
@@ -362,6 +364,22 @@
           tvlEl.textContent = data.tvlCtn.toFixed(0) + ' CTN';
         } else {
           tvlEl.textContent = 'n/a';
+        }
+
+        if (holdersEl) {
+          try {
+            var resH = await fetch('https://dex.coredrop.fun/api/dex/dockie-holders', { cache: 'no-store' });
+            if (resH.ok) {
+              var dH = await resH.json();
+              if (typeof dH.holders === 'number' && isFinite(dH.holders)) {
+                holdersEl.textContent = dH.holders.toString();
+              } else {
+                holdersEl.textContent = 'n/a';
+              }
+            }
+          } catch (e) {
+            // ignore holder fetch errors
+          }
         }
       } catch (e) {
         console.warn('Stats API not yet live', e);
